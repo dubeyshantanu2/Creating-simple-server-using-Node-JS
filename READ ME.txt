@@ -1,0 +1,31 @@
+To creat a simple local server.
+
+-create a folder and run cmd.
+-type npm init , which will create a package.json file. 
+-to create a index.js file type in cmd, type NUL > index.js .
+-add the start file in package.jason under "scripts"- "start" : "node index"
+-type in cmd to start the server- start npm .
+-in chrome type- http://localhost:3000/
+
+
+
+index.js=
+
+const http = require('http');
+
+const hostname = "localhost";
+const port = 3000;
+
+const server = http.createServer((req, res) => {
+
+    console.log(req.headers);
+
+    res.statusCode = 200;
+    res.setHeader('Content-Type','text/html');
+    res.end('<html> <body> <h1> Server Connection successful. </h1> </body> </html>');
+
+});
+
+server.listen(port,hostname, ()=> {
+    console.log('server running at http://${hostname}:${port}');
+});
