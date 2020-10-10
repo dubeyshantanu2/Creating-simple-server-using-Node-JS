@@ -5,7 +5,7 @@ To creat a simple local server.
 -to create a index.js file type in cmd, type NUL > index.js .
 -add the start file in package.jason under "scripts"- "start" : "node index"
 -type in cmd to start the server- start npm .
--in chrome type- http://localhost:3000/
+-in google chrome type- http://localhost:3000/
 
 
 
